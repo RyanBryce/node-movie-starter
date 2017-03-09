@@ -6,6 +6,7 @@ var app = express();
 app.use(bodyParser.json());
 
 app.get('/api/movies', movieCtrl.get);
+app.get('/api/movies/:movieId', movieCtrl.getById);
 app.put('/api/movies', movieCtrl.modify);
 app.post('/api/movies', movieCtrl.add);
 app.delete('/api/movies', movieCtrl.delete);
